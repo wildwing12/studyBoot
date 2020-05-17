@@ -1,15 +1,11 @@
 package com.study.demo.VO;
 
+import lombok.Data;
+
+@Data
 public class TestVo {
 
 	private Integer test;
 
-	public Integer getTest() {
-		return test;
-	}
-
-	public void setTest(Integer test) {
-		this.test = test;
-	}
 	
 }
