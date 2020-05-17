@@ -1,9 +1,5 @@
 package com.study.demo.VO;
 
-import lombok.Data;
-
-
-
 public class Test2VO {
 	
 	private Integer idx;	
