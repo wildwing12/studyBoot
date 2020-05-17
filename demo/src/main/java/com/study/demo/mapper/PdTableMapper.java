@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 @Mapper
 public interface PdTableMapper {
 
-	List<Map<String, Object>> SelectList(Map<String, Object> map);
+	public abstract List<Map<String, Object>> SelectList(Map<String, Object> map);
 
 
 }
