@@ -4,6 +4,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.google.gson.Gson;
 import com.study.demo.VO.Test2VO;
@@ -32,5 +33,10 @@ public class HomeController {
 		}else {
 			return "-";
 		}
+	}
+	@GetMapping("/main")
+	public ModelAndView hello(ModelAndView mv) {
+		mv.setViewName("hello");
+		return mv;
 	}
 }
