@@ -16,8 +16,9 @@ public class MainController {
 	@Autowired
 	PdTableService service;
 	
+	//jsp 테스트용
 	@RequestMapping("/hello")
-	public ModelAndView hello(ModelAndView mav, Map<String,Object> map) {
+	public ModelAndView hello(ModelAndView mav, Map<String,Object> map) throws Exception {
 		List<Map<String,Object>> list = service.pdList(map);
 		
 		mav.addObject("list", list);

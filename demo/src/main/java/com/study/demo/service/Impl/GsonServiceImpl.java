@@ -19,13 +19,13 @@ public class GsonServiceImpl implements GsonService {
 		try {
 			Test2VO test = new Test2VO();
 			test.setIdx(3);
-//			test.setIdx(3);
-//			test.setName("JJUD mansei");
+			test.setName("success");
 			
 			Gson gson = new Gson();
 			json = gson.toJson(test).toString();
 		} catch (Exception e) {
 			log.error("error : {}", e);
+			throw new RuntimeException();
 		}
 		
 		return json;
