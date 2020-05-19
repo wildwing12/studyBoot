@@ -3,8 +3,7 @@ package com.study.demo.VO;
 import lombok.Data;
 
 @Data
-public class PdTableVO {
-	
+public class PdTableVO {	
 	
 	String pdNm;
 	String spdNo;
@@ -15,4 +14,5 @@ public class PdTableVO {
 	String imgRetNm;
 	String regDt;
 	String udtDt;
+	
 }

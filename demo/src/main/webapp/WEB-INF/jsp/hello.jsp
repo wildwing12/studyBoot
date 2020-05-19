@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-hello Spring boot
+<%@ include file="include/header.jsp" %>
+<h2>hello Spring boot</h2>
+<c:forEach var="row" items="${list}">
+	<h3>${row.pd_nm}</h3>
+</c:forEach>
 </body>
 </html>
