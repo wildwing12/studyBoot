@@ -7,6 +7,6 @@ public class Test2VO {
 	
 	private Integer idx;	
 	private String name;
-//1234
+//123412341234
 
 }
