@@ -23,9 +23,9 @@ public class PdTableServiceImpl implements PdTableService{
 		try {
 			list = mapper.SelectList(map);
 		} catch (Exception e) {
-			//예외처리 예시(e.printStackTrace() 지양)
+			//�삁�쇅泥섎━ �삁�떆(e.printStackTrace() 吏��뼇)
 			log.error("PdTableService error: {}",e);
-			throw new RuntimeException();
+			throw new RuntimeException(); 
 		}
 		return list;
 	}
