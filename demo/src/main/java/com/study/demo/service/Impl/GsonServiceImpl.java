@@ -17,7 +17,7 @@ public class GsonServiceImpl implements GsonService {
 		String json = "";
 		
 		try {
-			//목업데이터 세팅해서 테스트
+			//목업데이터 세팅해서 테스트 ㅇㅇ
 			Test2VO test = new Test2VO();
 			test.setIdx(3); 
 			test.setName("success");
