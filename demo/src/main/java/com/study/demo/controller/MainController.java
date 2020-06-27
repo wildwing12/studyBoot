@@ -25,5 +25,11 @@ public class MainController {
 		mav.setViewName("hello");
 		return mav;
 	}
+	
+	//리소스 경로 추가 테스트
+	@RequestMapping("/jsTest")
+	public String jsTest() {
+		return "test";
+	}
 
 }
