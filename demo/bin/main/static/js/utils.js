@@ -23,7 +23,7 @@ const IgnoreEmptyNumber = function(num){
 	}
 }
 
-const SetTimeFormat = function(time, type){
+const SetTimeFormat = function(time){
 //	return moment(time).format('YYYY-MM-DD'); //해당 1줄만으로도 날짜 포맷 처리는 가능...
     let year = time.getFullYear();
     let month = time.getMonth()+1;
