@@ -19,9 +19,11 @@ public class MainController {
 	//jsp 테스트용
 	@RequestMapping("/hello")
 	public ModelAndView hello(ModelAndView mav, Map<String,Object> map) throws Exception {
-		List<Map<String,Object>> list = service.pdList(map);
-		
-		mav.addObject("list", list);
+		/*
+		 * List<Map<String,Object>> list = service.pdList(map);
+		 * 
+		 * mav.addObject("list", list);
+		 */
 		mav.setViewName("hello");
 		return mav;
 	}
