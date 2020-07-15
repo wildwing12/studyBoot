@@ -16,3 +16,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 <!-- 자주 쓰이는(혹은 쓰일) 기능 모음 js -->
 <script src="js/utils.js"></script>
+
+<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+		crossorigin="anonymous"></script>
+<script src="js/scripts.js"></script>
