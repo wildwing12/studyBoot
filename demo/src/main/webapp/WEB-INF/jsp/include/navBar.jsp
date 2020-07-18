@@ -16,7 +16,7 @@
 	        <a class="nav-link" href="#">회원관리</a>
 	    </li>
 	    <li class="nav-item mr-0 mr-md-3">
-	        <a class="nav-link" href="#">업체관리</a>
+	        <a class="nav-link" href="/company">업체관리</a>
 	    </li>
 	    <li class="nav-item mr-0 mr-md-3">
 	        <a class="nav-link" href="#">상품관리</a>
