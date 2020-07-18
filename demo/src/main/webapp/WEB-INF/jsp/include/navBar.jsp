@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-	<a class="navbar-brand" href="index.html">ADMIN</a>
+	<a class="navbar-brand" href="/">ADMIN</a>
 	<button class="btn btn-link btn-sm order-1 order-lg-0"
 		id="sidebarToggle" href="#">
 		<i class="fas fa-bars"></i>
@@ -19,7 +19,7 @@
 	        <a class="nav-link" href="/company">업체관리</a>
 	    </li>
 	    <li class="nav-item mr-0 mr-md-3">
-	        <a class="nav-link" href="#">상품관리</a>
+	        <a class="nav-link" href="/product/index">상품관리</a>
 	    </li>
 	    <li class="nav-item mr-0 mr-md-3">
 	        <a class="nav-link" href="#">주문관리</a>
