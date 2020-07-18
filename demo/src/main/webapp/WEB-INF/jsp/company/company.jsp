@@ -19,6 +19,8 @@ $(function(){
 
     $("#date1").datepicker();
     $("#date2").datepicker();
+    $("#date3").datepicker();
+    $("#date4").datepicker();
     //연구 필요
     //$('.target').before('<img src="http://jqueryui.com/resources/demos/datepicker/images/calendar.gif" class="overlay" id="date2" />').datepicker();
     	
@@ -107,7 +109,7 @@ margin-top: 9px;
 					    </div>
 					    <div class="col" style="text-align: right;">
 					     <button class="btn btn-success">엑셀 다운로드</button>
-					     <button class=" btn btn-secondary">업체 등록</button>
+					     <button class=" btn btn-secondary" data-toggle="modal" data-target="#reg_company">업체 등록</button>
 					    </div>
 				  </div>
 						<table class="table table-bordered text-center" style="margin-top: 10px" >
@@ -246,7 +248,85 @@ margin-top: 9px;
 			</footer>
 		</div>
 	</div>
-	<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-		crossorigin="anonymous"></script> -->
+	<!-- Modal -->
+	<div class="modal fade" id="reg_company" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" >
+	  <div class="modal-dialog modal-dialog-centered modal-xl " role="document">
+	    <div class="modal-content">
+	      <div class="modal-header bg-dark">
+	        <h5 class="modal-title text-white " id="exampleModalCenterTitle" >업체 등록</h5>
+	        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	      <span>■기본정보</span>
+	       <table class="table table-bordered text-center">
+		       <tr>
+			       <td colspan="2" class="bg-dark text-white">업체아이디</td>
+			       <td><input type="text" readonly="readonly" size="50%"></td>
+			       <td colspan="2" class="bg-dark text-white">거래처 구분</td>
+			       <td><input type="text" size="50%"></td>
+		       </tr>
+		        <tr>
+			       <td colspan="2" class="bg-dark text-white">업체명</td>
+			       <td><input type="text" size="50%"></td>
+			       <td colspan="2" class="bg-dark text-white">대표자명</td>
+			       <td><input type="text" size="50%"></td>
+		       </tr>
+		        <tr>
+			       <td colspan="2" class="bg-dark text-white">사업자등록번호</td>
+			       <td><input type="text" size="50%"></td>
+			       <td colspan="2" class="bg-dark text-white">법인번호</td>
+			       <td><input type="text" size="50%"></td>
+		       </tr>
+		        <tr>
+			       <td colspan="2" class="bg-dark text-white">업태</td>
+			       <td><input type="text" size="50%"></td>
+			       <td colspan="2" class="bg-dark text-white">거래처코드</td>
+			       <td><input type="text" size="50%"></td>
+		       </tr>
+		        <tr>
+			      <td colspan="2" class="bg-dark text-white">회사 연락처</td>
+			       <td><input type="text" size="50%"></td>
+			       <td colspan="2" class="bg-dark text-white">대표연락처</td>
+			       <td><input type="text" size="50%"></td>
+		       </tr>
+		        <tr>
+			       <td colspan="2" class="bg-dark text-white">이메일 주소</td>
+			       <td colspan="4" class="text-left"><input type="text" size="50%">@
+			       <select>
+			       			<option>선택하세요</option>
+			       			<option>naver.com</option>
+			       			<option>gmail.com</option>
+			       			<option>daum.net</option>
+			       			<option>hanmail.net</option>
+			       </select>
+			       </td>
+		       </tr>
+		        <tr>
+			       <td rowspan="3" class="bg-dark text-white" style="padding-top: 75px" >회사 주소</td>
+			       <td colspan="5" class="text-left"> 우편번호 <input type="text" size="20%">&nbsp;&nbsp;<button class="btn btn-primary">주소찾기</button></td>
+			       
+		       </tr>
+		        <tr>
+			       <td colspan="5" class="text-left"> <input type="text" size="70%" readonly="readonly"></td>
+		       </tr>
+		        <tr>
+			       <td colspan="5" class="text-left"> <input type="text" size="70%"></td>
+		       </tr>
+		        <tr>
+			       <td rowspan="3" class="bg-dark text-white">계약기간 </td>
+			       <td colspan="5" class="text-left">  <input type="text" size="30%" id="date3">~<input type="text" size="30%" id="date4"></button></td>
+		       </tr>
+	       	
+	       </table>
+	      </div>
+	      <div class="modal-footer" style="border-top: none; margin: 0 auto" >
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">초기화</button>
+	        <button type="button" class="btn btn-primary">신규등록</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>	
 </body>
 </html>
