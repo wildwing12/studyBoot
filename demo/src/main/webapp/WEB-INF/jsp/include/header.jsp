@@ -17,6 +17,7 @@
 <!-- 자주 쓰이는(혹은 쓰일) 기능 모음 js -->
 <script src="/js/utils.js"></script>
 
+<!-- 부트스트랩 관련 -->
 <link href="/css/styles.css" rel="stylesheet" />
 <link
 	href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"
@@ -28,3 +29,8 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
 		crossorigin="anonymous"></script>
 <script src="/js/scripts.js"></script>
+
+<!-- 데이트피커 관련 -->
+<link href="/css/jquery-ui.css" rel="stylesheet" />
+<script src="/js/jquery-ui.js"></script>
+<script src="/js/datepicker-ko.js"></script>
