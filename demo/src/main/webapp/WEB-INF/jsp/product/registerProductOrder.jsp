@@ -10,11 +10,11 @@
 	vertical-align: middle;
 }
 </style>
-<div class="modal fade" id="registerProduct" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="registerProductOrder" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header bg-dark text-white">
-        <h5 class="modal-title" id="staticBackdropLabel">상품등록</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">발주신청</h5>
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
