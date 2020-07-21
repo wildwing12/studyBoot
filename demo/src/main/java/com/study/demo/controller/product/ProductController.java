@@ -10,9 +10,17 @@ public class ProductController {
 	
 	@RequestMapping("/index")
 	public ModelAndView index() {
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("product/index");
-		return mav;
+		return setMav("product/index");
+	}
+	
+	@RequestMapping("/order")
+	public ModelAndView orderIndex() {
+		return setMav("product/orderIndex");
 	}
 
+	private ModelAndView setMav(String viewName) {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName(viewName);
+		return mav;
+	}
 }

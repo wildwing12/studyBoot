@@ -14,8 +14,8 @@
 				<div id="collapseLayouts"
 					aria-labelledby="headingOne" data-parent="#sidenavAccordion">
 					<nav class="sb-sidenav-menu-nested nav">
-						<a class="nav-link" href="layout-static.html">상품정보</a>
-						<a class="nav-link" href="layout-sidenav-light.html">상품발주</a>
+						<a class="nav-link" href="/product/index">상품정보</a>
+						<a class="nav-link" href="/product/order">상품발주</a>
 					</nav>
 				</div>
 			</div>
