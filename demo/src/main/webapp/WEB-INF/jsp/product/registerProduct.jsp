@@ -23,8 +23,8 @@
       	<p>■ 기본정보</p>
         <table class="table table-bordered" id="productRegisterTable">
         	<tr>
-        		<th class="bg-secondary text-white">상품아이디</th>
-        		<td style="width: 30%;"><input style="width: 90%;"></td>
+        		<th class="bg-secondary text-white">상품ID</th>
+        		<td style="width: 30%;"><input readonly style="width:90%; background:#e6e6e6;"></td>
         		<th class="bg-secondary text-white">상품코드</th>
         		<td>
         			<select style="width: 70%;">
@@ -39,7 +39,7 @@
         		<td style="width: 30%;"><input style="width: 90%;"></td>
         	</tr>
         	<tr>
-        		<th class="bg-secondary text-white">업체아이디</th>
+        		<th class="bg-secondary text-white">업체ID</th>
         		<td colspan="3">
         			<input style="width: 80%;">&nbsp;
         			<button type="button" class="btn btn-secondary">업체 조회</button>
@@ -98,7 +98,7 @@
         		</td>
         	</tr>
         	<tr>
-        		<th class="bg-secondary text-white">상품이미지</th>
+        		<th class="bg-secondary text-white">상품IMG</th>
         		<td colspan="3" style="vertical-align: middle;">
         			<div class="custom-file">
 					  <input type="file" class="custom-file-input" id="customFile">

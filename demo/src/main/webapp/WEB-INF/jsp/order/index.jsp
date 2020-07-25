@@ -4,13 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Admin - 상품발주</title>
+<title>Admin - 주문현황</title>
 </head>
 <body>
 	<%@ include file="../include/header.jsp"%>
 	<%@ include file="../include/navBar.jsp"%>
 	<div id="layoutSidenav">
-		<%@ include file="sideBarProduct.jsp" %>
+		<%@ include file="sideBarOrder.jsp" %>
 		<div id="layoutSidenav_content">
 			<main>
 				<div class="container-fluid" style="margin-top: 20px;">
@@ -19,18 +19,29 @@
                     	<div class="card-body">
                         	<table class="table table-borderless">
                         		<tr>
-                        			<th style="width:10%;">발주일자</th>
+                        			<th style="width:10%;">주문일자</th>
                         			<td>
                         				<input id="regDt1" readonly> ~ <input id="regDt2" readonly>
+                        			</td>
+                        			<th style="width:10%;">반품여부</th>
+                        			<td style="width:30%;">
+                        				<input type="checkbox" value="Y">&nbsp;예&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="N">&nbsp;아니오&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         			</td>
                         		</tr>
                         		<tr>
                         			<th style="width:10%;">검색어</th>
                         			<td>
-                        				<select style="width: 12%;">
+                        				<select style="width: 20%;">
                         					<option></option>
                         				</select>&nbsp;
-                        				<input style="width: 70%;">
+                        				<input style="width: 60%;">
+                        			</td>
+                        			<th style="width:10%;">결제수단</th>
+                        			<td>
+                        				<select style="width: 40%;">
+                        					<option></option>
+                        				</select>&nbsp;
                         			</td>
                         		</tr>
                         		<tr>
@@ -53,21 +64,20 @@
 					     <button class="btn">
 					     	<img alt="엑셀 다운로드" src="/img/excel.jpg" width="40px" height="40px">
 					     </button>
-					     <button class="btn btn-secondary" data-toggle="modal" data-target="#registerProductOrder">발주신청</button>
 					    </div>
 				  </div>
 				<table class="table table-bordered text-center" style="margin-top: 10px" >
 					<thead class="thead-dark">
 						<tr>
 							<th>NO</th>
-							<th>업체아이디</th>
-							<th>업체명</th>
-							<th>대표자명</th>
-							<th>업태</th>
-							<th>거래처코드</th>
-							<th>거래처그룹코드</th>
-							<th>업체등급</th>
-							<th>계약기간</th>
+							<th>주문번호</th>
+							<th>구매자</th>
+							<th>상품명</th>
+							<th>송장번호</th>
+							<th>반품여부</th>
+							<th>판매자</th>
+							<th>주문금액</th>
+							<th>주문일시</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -91,7 +101,6 @@
 			<%@ include file="../include/footer.jsp" %>
 		</div>
 	</div>
-<%@ include file="registerProductOrder.jsp" %>
 <script>
 $(document).ready(function(){
 	$('#regDt1').datepicker();

@@ -22,7 +22,7 @@
 	        <a class="nav-link" href="/product/index">상품관리</a>
 	    </li>
 	    <li class="nav-item mr-0 mr-md-3">
-	        <a class="nav-link" href="#">주문관리</a>
+	        <a class="nav-link" href="/order/index">주문관리</a>
 	    </li>
 	    <li class="nav-item mr-0 mr-md-3">
 	        <a class="nav-link" href="#">정산관리</a>
