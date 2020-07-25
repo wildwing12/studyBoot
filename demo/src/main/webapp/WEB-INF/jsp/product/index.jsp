@@ -26,65 +26,65 @@ input[type=checkbox] {
                         		<tr>
                         			<th style="width:10%;">제조사</th>
                         			<td colspan="3">
-                        				<input type="checkbox" name="pd_001">&nbsp;LG전자&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_005">&nbsp;삼성전자&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_004">&nbsp;APPLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_003">&nbsp;레노버&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_002">&nbsp;ASUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaManu" value="pd001">&nbsp;LG전자&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaManu" value="pd005">&nbsp;삼성전자&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaManu" value="pd004">&nbsp;APPLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaManu" value="pd003">&nbsp;레노버&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaManu" value="pd002">&nbsp;ASUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         			</td>
                         		</tr>
                         		<tr>
                         			<th style="width:10%;">CPU</th>
                         			<td colspan="3">
-                        				<input type="checkbox" name="pd_006">&nbsp;코어i7-10세대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_007">&nbsp;코어i5-10세대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_008">&nbsp;라이젠7-5세대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_009">&nbsp;라이젠5-5세대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_010">&nbsp;기타&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaCpu" value="pd006">&nbsp;코어i7-10세대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaCpu" value="pd007">&nbsp;코어i5-10세대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaCpu" value="pd008">&nbsp;라이젠7-5세대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaCpu" value="pd009">&nbsp;라이젠5-5세대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaCpu" value="pd010">&nbsp;기타&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         			</td>
                         		</tr>
                         		<tr>
                         			<th style="width:10%;">화면크기</th>
                         			<td colspan="3">
-                        				<input type="checkbox" name="pd_011">&nbsp;17인치대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_012">&nbsp;16인치대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_013">&nbsp;15인치대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_014">&nbsp;14인치대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_015">&nbsp;13인치대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaSize" value="pd011">&nbsp;17인치대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaSize" value="pd012">&nbsp;16인치대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaSize" value="pd013">&nbsp;15인치대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaSize" value="pd014">&nbsp;14인치대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaSize" value="pd015">&nbsp;13인치대&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         			</td>
                         		</tr>
                         		<tr>
                         			<th style="width:10%;">RAM</th>
-                        			<td>
-                        				<input type="checkbox" name="pd_016">&nbsp;64GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_017">&nbsp;32GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_018">&nbsp;16GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_019">&nbsp;8GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_020">&nbsp;4GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        			<td style="width:40%;">
+                        				<input type="checkbox" value="pd016">&nbsp;64GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="pd017">&nbsp;32GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="pd018">&nbsp;16GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="pd019">&nbsp;8GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="pd020">&nbsp;4GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         			</td>
                         			<th style="width:10%;">운영체제</th>
-                        			<td>
-                        				<input type="checkbox" name="pd_024">&nbsp;Win10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_025">&nbsp;Win10 Pro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_026">&nbsp;미포함&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        			<td style="width:40%;">
+                        				<input type="checkbox" value="pd024">&nbsp;Win10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="pd025">&nbsp;Win10 Pro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="pd026">&nbsp;미포함&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         			</td>
                         		</tr>
                         		<tr>
                         			<th style="width:10%;">SSD용량</th>
                         			<td colspan="3">
-                        				<input type="checkbox" name="pd_021">&nbsp;1TB 초과&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_022">&nbsp;512GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_023">&nbsp;256GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="pd021">&nbsp;1TB 초과&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="pd022">&nbsp;512GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="pd023">&nbsp;256GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         			</td>
                         		</tr>
                         		<tr>
                         			<th style="width:10%;">무게</th>
                         			<td colspan="3">
-                        				<input type="checkbox" name="pd_027">&nbsp;1.0kg 이하&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_028">&nbsp;1.4kg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_029">&nbsp;1.7kg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_030">&nbsp;2.0kg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pd_031">&nbsp;2.3kg 이상&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="pd027">&nbsp;1.0kg 이하&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="pd028">&nbsp;1.4kg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="pd029">&nbsp;1.7kg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="pd030">&nbsp;2.0kg&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" value="pd031">&nbsp;2.3kg 이상&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         			</td>
                         			<!-- <th style="width:10%;">상품코드</th>
                         			<td>
@@ -133,14 +133,13 @@ input[type=checkbox] {
 					<thead class="thead-dark">
 						<tr>
 							<th>NO</th>
-							<th>업체아이디</th>
+							<th>상품ID</th>
+							<th>상품명</th>
 							<th>업체명</th>
-							<th>대표자명</th>
-							<th>업태</th>
-							<th>거래처코드</th>
-							<th>거래처그룹코드</th>
-							<th>업체등급</th>
-							<th>계약기간</th>
+							<th>재고수량</th>
+							<th>발주일자</th>
+							<th>발주수량</th>
+							<th>가격</th>
 						</tr>
 					</thead>
 					<tbody>

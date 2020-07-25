@@ -5,7 +5,7 @@
 #staticBackdropLabel {
 	font-weight: 600;
 }
-#productRegisterTable tr > th {
+#productOrderRegisterTable tr > th {
 	width: 15%;
 	vertical-align: middle;
 }
@@ -21,96 +21,37 @@
       </div>
       <div class="modal-body">
       	<p>■ 기본정보</p>
-        <table class="table table-bordered" id="productRegisterTable">
+        <table class="table table-bordered" id="productOrderRegisterTable">
         	<tr>
-        		<th class="bg-secondary text-white">상품아이디</th>
+        		<th class="bg-secondary text-white">입점업체</th>
         		<td style="width: 30%;"><input style="width: 90%;"></td>
-        		<th class="bg-secondary text-white">상품코드</th>
-        		<td>
-        			<select style="width: 70%;">
-        				<option></option>
-        			</select>
-        		</td>
+        		<th class="bg-secondary text-white">업체ID</th>
+        		<td style="width: 30%;"><input readonly style="width:90%; background:#e6e6e6;"></td>
         	</tr>
         	<tr>
         		<th class="bg-secondary text-white">상품명</th>
         		<td style="width: 30%;"><input style="width: 90%;"></td>
-        		<th class="bg-secondary text-white">가격 (원)</th>
-        		<td style="width: 30%;"><input style="width: 90%;"></td>
+        		<th class="bg-secondary text-white">재고수량</th>
+        		<td style="width: 30%;"><input type="number" style="width: 90%;"></td>
         	</tr>
         	<tr>
-        		<th class="bg-secondary text-white">업체아이디</th>
+        		<th class="bg-secondary text-white">상품ID</th>
         		<td colspan="3">
-        			<input style="width: 80%;">&nbsp;
-        			<button type="button" class="btn btn-secondary">업체 조회</button>
+        			<input style="width: 85%;">&nbsp;
+        			<button type="button" class="btn btn-secondary">조회</button>
         		</td>
         	</tr>
         	<tr>
-        		<th class="bg-secondary text-white">업체명</th>
+        		<th class="bg-secondary text-white">발주수량</th>
+        		<td style="width: 30%;"><input type="number" style="width: 90%;"></td>
+        		<th class="bg-secondary text-white">가격(원)</th>
         		<td style="width: 30%;"><input style="width: 90%;"></td>
-        		<th class="bg-secondary text-white">제조사명</th>
-        		<td>
-        			<select style="width: 70%;">
-        				<option></option>
-        			</select>
-        		</td>
-        	</tr>
-        	<tr>
-        		<th class="bg-secondary text-white">CPU 종류</th>
-        		<td>
-        			<select style="width: 70%;">
-        				<option></option>
-        			</select>
-        		</td>
-        		<th class="bg-secondary text-white">화면크기</th>
-        		<td>
-        			<select style="width: 70%;">
-        				<option></option>
-        			</select>
-        		</td>
-        	</tr>
-        	<tr>
-        		<th class="bg-secondary text-white">RAM 용량</th>
-        		<td>
-        			<select style="width: 70%;">
-        				<option></option>
-        			</select>
-        		</td>
-        		<th class="bg-secondary text-white">SSD 용량</th>
-        		<td>
-        			<select style="width: 70%;">
-        				<option></option>
-        			</select>
-        		</td>
-        	</tr>
-        	<tr>
-        		<th class="bg-secondary text-white">운영체제</th>
-        		<td>
-        			<select style="width: 70%;">
-        				<option></option>
-        			</select>
-        		</td>
-        		<th class="bg-secondary text-white">무게</th>
-        		<td>
-        			<select style="width: 70%;">
-        				<option></option>
-        			</select>
-        		</td>
-        	</tr>
-        	<tr>
-        		<th class="bg-secondary text-white">상품이미지</th>
-        		<td colspan="3" style="vertical-align: middle;">
-        			<div class="custom-file">
-					  <input type="file" class="custom-file-input" id="customFile">
-					  <label class="custom-file-label" for="customFile">파일 첨부</label>
-					</div>
-        		</td>
         	</tr>
         </table>
       </div>
       <div class="modal-footer" style="margin: 0 auto; border-top: none;">
         <button type="button" class="btn btn-dark" data-dismiss="modal">초기화</button>
-        <button type="button" class="btn btn-dark">신규등록</button>
+        <button type="button" class="btn btn-dark">신청</button>
       </div>
     </div>
   </div>
