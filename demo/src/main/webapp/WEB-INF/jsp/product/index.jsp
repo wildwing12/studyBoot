@@ -169,7 +169,7 @@ $(document).ready(function(){
 	$('#regDt1').datepicker();
 	$('#regDt2').datepicker();
 	
-	appearFileName();
+	CommonUtil.appearFileName();
 });
 
 </script>

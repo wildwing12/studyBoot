@@ -10,12 +10,12 @@
 <body>
 	<script>
 		var value = 1 > 2 ? true : undefined;
-		console.log('empty? ', IsEmpty(value));
-		document.write('Empty? ', IsEmpty(value));
+		console.log('empty? ', CommonUtil.isEmpty(value));
+		document.write('Empty? ', CommonUtil.isEmpty(value));
 		
 		var now = new Date();
-		console.log('time => ', SetTimeFormat(now));
-		document.write('<br>TIME => ', SetTimeFormat(now));
+		console.log('time => ', CommonUtil.setTimeFormat(now));
+		document.write('<br>TIME => ', CommonUtil.setTimeFormat(now));
 	</script>
 </body>
 </html>
