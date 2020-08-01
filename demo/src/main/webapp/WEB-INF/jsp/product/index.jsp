@@ -124,7 +124,7 @@ input[type=checkbox] {
 					    </div>
 					    <div class="col" style="text-align: right;">
 					     <button class="btn">
-					     	<img alt="엑셀 다운로드" src="/img/excel.jpg" width="40px" height="40px">
+					     	<img alt="엑셀 다운로드" src="/img/excel.jpg">
 					     </button>
 					     <button class="btn btn-secondary" data-toggle="modal" data-target="#registerProduct">상품등록</button>
 					    </div>
