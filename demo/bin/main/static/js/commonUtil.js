@@ -30,4 +30,4 @@ const CommonUtil = {
 			$(this).siblings(".custom-file-label").addClass("selected").html(fileName);
 		});
 	}
-}
+};
