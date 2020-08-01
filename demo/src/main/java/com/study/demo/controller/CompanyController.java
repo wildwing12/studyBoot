@@ -27,8 +27,9 @@ public class CompanyController extends AbstractController{
 	//회사 리스트
 	@GetMapping("")
 	public ModelAndView companyMain(ModelAndView mav, @RequestParam Map<String, Object> map) {
-		log.info("회사 리스트 map 값 : ",map);
+		log.info("회사 리스트 map 값 : {}",map);
 		Map<String, Object> result = makeQueryResultMap(companySerivce.list(map));
+		log.info("result값:{}",result);
 		mav.addObject("result", result);
 		mav.setViewName("company/company");
 		return mav;

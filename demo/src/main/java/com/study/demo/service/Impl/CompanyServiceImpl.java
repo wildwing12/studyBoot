@@ -27,9 +27,9 @@ public class CompanyServiceImpl implements CompanyService{
 		try {
 			Integer cnt  = companyMapper.rowCnt(map);//리스트로우수
 			log.info("회사 테이블 로우수:{}",cnt);
-			
+			log.info("map정보:{}", map);
 			Pager pager =new Pager(cnt, 1);//페이징(로우수, 현재 페이지 번호, 일단 1로)
-			int begin = pager.getPageBegin();//시작 페이지
+			int begin = pager.getPageBegin()-1;//시작 페이지
 			int pageScale = pager.PAGE_SCALE;//로우갯수
 			
 			map.put("begin",begin);
