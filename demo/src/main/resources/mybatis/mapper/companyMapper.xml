@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.study.demo.mapper.CompanyMapper">
-	<select id="rowCnt" parameterType="int" resultType="int" >
+	<select id="rowCnt" parameterType="java.util.HashMap" resultType="int" >
 		SELECT 
 			COUNT(*)
 		FROM COM_MASTER 
@@ -13,7 +13,7 @@
 				A.*
 		FROM(
 			SELECT 
-			      (SELECT @ROWNUM := @ROWNUM+1) AS rnum
+			      CAST((SELECT @ROWNUM := @ROWNUM+1) AS UNSIGNED) AS rnum
 			      ,COM.COM_NO
 			      ,COM.COM_ID
 			      ,COM.COM_NM

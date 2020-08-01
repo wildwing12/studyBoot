@@ -128,93 +128,20 @@ margin-top: 9px;
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>1</td>
-									<td><a  href="#" data-toggle="modal" data-target="#updateCompany"> 2</a> </td>
-									<td>3</td>
-									<td>4</td>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-								</tr>
-								<tr>
-									<td>4</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-								</tr>
-								<tr>
-									<td>6</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-								</tr>
-								<tr>
-									<td>7</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-								</tr><tr>
-									<td>8</td>
-									<td>2</td>
-									<td>3</td>
-									<td>4</td>
-									<td>5</td>
-									<td>6</td>
-									<td>7</td>
-									<td>8</td>
-									<td>9</td>
-								</tr>
+								<c:forEach items="${result.data.list}" var="list">
+									
+									<tr>
+										<td>${list.rnum}</td>
+										<td><a  href="#" data-toggle="modal" data-target="#updateCompany"> ${list.com_no}</a> </td>
+										<td>${list.COM_NM}</td>
+										<td>${list.COM_CNM}</td>
+										<td>${list.COM_TYPE}</td>
+										<td>${list.COM_TR_CD}</td>
+										<td>${list.COM_TR_GRP_CD}</td>
+										<td>${list.COM_RK}</td>
+										<td>${list.COM_PRD_ST}~${list.COM_PRD_ED}</td>
+									</tr>
+								</c:forEach>
 							</tbody>
 							
 							
