@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.study.demo.mapper.CompanyMapper">
+	<select id="rowCnt" parameterType="int" resultType="int" >
+		SELECT 
+			COUNT(*)
+		FROM COM_MASTER 
+	</select>
+	
+	<select id="comList" parameterType="java.util.HashMap" resultType="java.util.HashMap" >
+		SELECT
+				A.*
+		FROM(
+			SELECT 
+			      (SELECT @ROWNUM := @ROWNUM+1) AS rnum
+			      ,COM.COM_NO
+			      ,COM.COM_ID
+			      ,COM.COM_NM
+			      ,COM.COM_CNM
+			      ,COM.COM_TYPE
+			      ,COM.COM_TR_CD
+			      ,COM.COM_TR_GRP_CD
+			      ,COM.COM_RK
+			      ,COM.COM_PRD_ST
+			      ,COM.COM_PRD_ED
+			FROM COM_MASTER COM
+			JOIN (SELECT @ROWNUM := 0) r
+			WHERE COM.USE_YN ='Y'
+			ORDER BY rnum DESC
+			) A
+			WHERE 1=1
+			LIMIT #{pageScale} OFFSET #{begin}
+			
+	</select>
+</mapper>
