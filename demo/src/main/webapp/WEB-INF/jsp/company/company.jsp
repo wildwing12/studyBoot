@@ -129,8 +129,8 @@ margin-top: 9px;
 							</thead>
 							<tbody>
 								<tr>
-									<td><a data-toggle="modal" data-target="#detailCompany" class ="cursor">1</a></td>
-									<td>2</td>
+									<td>1</td>
+									<td><a  href="#" data-toggle="modal" data-target="#updateCompany"> 2</a> </td>
 									<td>3</td>
 									<td>4</td>
 									<td>5</td>
