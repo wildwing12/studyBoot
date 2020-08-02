@@ -16,6 +16,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 <!-- 자주 쓰이는(혹은 쓰일) 기능 모음 js -->
 <script src="/js/commonUtil.js"></script>
+<script src="/js/commonConstants.js"></script>
 
 <!-- 부트스트랩 관련 -->
 <link href="/css/styles.css" rel="stylesheet" />
