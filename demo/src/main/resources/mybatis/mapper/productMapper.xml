@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.study.demo.mapper.ProductMapper">
+	<select id="selectPdId" resultType="java.util.HashMap">
+		SELECT 
+      		IF(A.AA<![CDATA[<]]>1, 'A1000001', CONCAT(LEFT(A.PDI_ID,1), CAST(SUBSTR(A.PDI_ID,2) AS UNSIGNED)+1)) pdiId 
+     	   ,IF(A.AA<![CDATA[<]]>1, 1, PDI_NO+1) pdiNo
+		FROM (SELECT IF(COUNT(*)<![CDATA[<]]>1,0,NULL) AA
+             	,PDI_ID
+             	,IFNULL(PDI_NO,0) PDI_NO
+      		  FROM  PD_INFO
+      		  ORDER BY PDI_NO DESC
+      		  LIMIT 1) A
+      	WHERE 1=1
+	</select>
+</mapper>
