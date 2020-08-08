@@ -1,3 +1,5 @@
+const contextPath = 'http://localhost:3100';
+
 const ParentCd = {
 	
 };

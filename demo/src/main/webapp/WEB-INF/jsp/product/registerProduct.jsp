@@ -24,7 +24,7 @@
         <table class="table table-bordered" id="productRegisterTable">
         	<tr>
         		<th class="bg-secondary text-white">상품ID</th>
-        		<td style="width: 30%;"><input readonly style="width:90%; background:#e6e6e6;"></td>
+        		<td style="width: 30%;"><input id="pdiId" readonly style="width:90%; background:#e6e6e6;"></td>
         		<th class="bg-secondary text-white">상품코드</th>
         		<td>
         			<select style="width: 70%;">
@@ -115,3 +115,21 @@
     </div>
   </div>
 </div>
+<script>
+$('.registerProduct').on('click', function(e){
+	e.preventDefault();
+	
+	getPdiId();
+});
+
+const getPdiId = async () => {
+	let res = await axios.get(contextPath+'/product/getPdiId');
+	if(Object.keys(res.data).length){
+		let data = res.data.data;
+		if(!CommonUtil.isEmpty(data.pdiId)){
+			console.log('data =>', res.data);
+			$('#pdiId').val(data.pdiId);
+		}
+	}
+}
+</script>
