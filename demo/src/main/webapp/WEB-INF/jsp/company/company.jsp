@@ -103,7 +103,7 @@ margin-top: 9px;
 					
 					<div class="row">
 					    <div class="col">
-					      	<span>검색결과</span><span>(25건)</span>
+					      	<span>검색결과</span><span>(${result.data.cnt}건)</span>
 					    </div>
 					    <div class="col">
 					      
