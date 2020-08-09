@@ -130,7 +130,7 @@ $('.registerProduct').on('click', function(e){
 const getPdiId = async () => {
 	let res = await axios.get(contextPath+'/product/getPdiId');
 	let data = res.data;
-	if(Object.keys(res.data).length){
+	if(Object.keys(data).length){
 		if(!CommonUtil.isEmpty(data.pdiId)){
 			console.log('data =>', res.data);
 			$('#pdiId').val(data.pdiId);
