@@ -9,6 +9,11 @@
 	width: 15%;
 	vertical-align: middle;
 }
+#pdiId {
+	width: 96%; 
+	background: #e6e6e6; 
+	font-weight: 600;
+}
 </style>
 <div class="modal fade" id="registerProduct" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
@@ -24,13 +29,13 @@
         <table class="table table-bordered" id="productRegisterTable">
         	<tr>
         		<th class="bg-secondary text-white">상품ID</th>
-        		<td style="width: 30%;"><input id="pdiId" readonly style="width:90%; background:#e6e6e6;"></td>
-        		<th class="bg-secondary text-white">상품코드</th>
+        		<td colspan="3"><input id="pdiId" readonly></td>
+        		<!-- <th class="bg-secondary text-white">상품코드</th>
         		<td>
         			<select style="width: 70%;">
         				<option></option>
         			</select>
-        		</td>
+        		</td> -->
         	</tr>
         	<tr>
         		<th class="bg-secondary text-white">상품명</th>
@@ -124,8 +129,8 @@ $('.registerProduct').on('click', function(e){
 
 const getPdiId = async () => {
 	let res = await axios.get(contextPath+'/product/getPdiId');
+	let data = res.data;
 	if(Object.keys(res.data).length){
-		let data = res.data.data;
 		if(!CommonUtil.isEmpty(data.pdiId)){
 			console.log('data =>', res.data);
 			$('#pdiId').val(data.pdiId);

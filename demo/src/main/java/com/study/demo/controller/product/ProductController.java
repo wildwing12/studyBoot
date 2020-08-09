@@ -3,7 +3,6 @@ package com.study.demo.controller.product;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -51,14 +50,17 @@ public class ProductController extends AbstractController {
 		return CommonUtil.setMav("product/orderIndex");
 	}
 	
+	/**
+	 * 상품ID 자동부여
+	 * @return ResponseEntity
+	 * @author HYUNJOO
+	 *
+	 */
 	@GetMapping("/getPdiId")
 	public ResponseEntity<Map<String,Object>> getPdiId() throws Exception {
-		ResponseEntity<Map<String,Object>> entity = null;
-		Map<String,Object> map = productService.selectPdId();
-		if(map != null) {
-			entity = new ResponseEntity<Map<String,Object>>(map, HttpStatus.OK);
-		}else {
-			entity = new ResponseEntity<Map<String,Object>>(HttpStatus.BAD_REQUEST);
+		ResponseEntity<Map<String,Object>> entity = productService.selectPdId();
+		if(entity != null) {
+			log.info("entity >>>>>> {}", entity.getBody());
 		}
 		return entity;
 	}
