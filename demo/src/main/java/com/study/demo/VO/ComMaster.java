@@ -66,7 +66,40 @@ public class ComMaster {
  // 사용여부 
  private String useYn;
 
- public Integer getComNo() {
+ // 업태
+ private String comType;
+ 
+ //게시판 시작 페이지
+ private int begin;
+ 
+ //게시판 로우겟수
+ private int pageScale;
+ 
+ public int getBegin() {
+	return begin;
+}
+
+public void setBegin(int begin) {
+	this.begin = begin;
+}
+
+public int getPageScale() {
+	return pageScale;
+}
+
+public void setPageScale(int pageScale) {
+	this.pageScale = pageScale;
+}
+
+public String getComType() {
+	return comType;
+}
+
+public void setComType(String comType) {
+	this.comType = comType;
+}
+
+public Integer getComNo() {
      return comNo;
  }
 
