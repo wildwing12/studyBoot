@@ -5,10 +5,13 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.study.demo.VO.PdInfo;
 import com.study.demo.controller.AbstractController;
 import com.study.demo.service.ProductService;
 import com.study.demo.utils.CommonUtil;
@@ -54,7 +57,6 @@ public class ProductController extends AbstractController {
 	 * 상품ID 자동부여
 	 * @return ResponseEntity
 	 * @author HYUNJOO
-	 *
 	 */
 	@GetMapping("/getPdiId")
 	public ResponseEntity<Map<String,Object>> getPdiId() throws Exception {
@@ -63,6 +65,22 @@ public class ProductController extends AbstractController {
 			log.info("entity >>>>>> {}", entity.getBody());
 		}
 		return entity;
+	}
+	
+	/**
+	 * 상품 및 속성 등록
+	 * @return int
+	 * @author HYUNJOO
+	 */
+	@PostMapping("/insert")
+	public int insertProduct(@RequestBody String paramData) throws Exception {
+		int result = 0;
+		log.info("json stringify ===> {}",paramData);
+		int flag = productService.insertProduct((PdInfo)getModel(paramData, PdInfo.class));
+		if(flag == 1) {
+			result = 1;
+		}
+		return result;
 	}
 
 }

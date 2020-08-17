@@ -4,6 +4,8 @@ import java.util.Map;
 
 import org.springframework.http.ResponseEntity;
 
+import com.study.demo.VO.PdInfo;
+
 public interface ProductService {
 	
 	/**
@@ -12,5 +14,12 @@ public interface ProductService {
 	 * @author HYUNJOO
 	 */
 	public abstract ResponseEntity<Map<String,Object>> selectPdId();
+	
+	/**
+	 * 상품 및 속성 등록
+	 * @return int
+	 * @author HYUNJOO
+	 */
+	public abstract int insertProduct(PdInfo pdInfo);
 
 }
