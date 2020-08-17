@@ -14,8 +14,8 @@ public class PdAttrInfo {
 	//상품속성번호(idx)
 	private Integer pdaNo;
 	
-	//상품번호
-	private Integer pdiNo;
+	//상품아이디
+	private String pdiId;
 	
 	//제조사
 	private String pdaManu;
@@ -52,5 +52,21 @@ public class PdAttrInfo {
 	
 	//사용여부
 	private String useYn;
+	
+	//기본 생성자
+	public PdAttrInfo() {}
+	
+	//파라미터가 있는 생성자
+	public PdAttrInfo(String pdiId, String pdaManu, String pdaCpu, String pdaSize, String pdaRam,
+			String pdaSsd, String pdaOs, String pdaWeight) {
+		this.pdiId = pdiId;
+		this.pdaManu = pdaManu;
+		this.pdaCpu = pdaCpu;
+		this.pdaSize = pdaSize;
+		this.pdaRam = pdaRam;
+		this.pdaSsd = pdaSsd;
+		this.pdaOs = pdaOs;
+		this.pdaWeight = pdaWeight;
+	}
 
 }

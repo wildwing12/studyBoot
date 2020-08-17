@@ -49,13 +49,18 @@ input[name="pdiId"] {
         	<tr>
         		<th class="bg-secondary text-white">업체명</th>
         		<td style="width: 30%;">
-        			<input id="comNm" style="width: 90%;">
+        			<input id="comNm" style="width: 90%;" readonly>
         			<input type="hidden" name="comNo">
         		</td>
         		<th class="bg-secondary text-white">제조사명</th>
         		<td>
         			<select name="pdaManu" style="width: 70%;">
-        				<option></option>
+        				<option value="">선택</option>
+        				<option value="104">삼성</option>
+        				<option value="101">LG</option>
+        				<option value="102">ASUS</option>
+        				<option value="103">레노버</option>
+        				<option value="105">APPLE</option>
         			</select>
         		</td>
         	</tr>
@@ -63,13 +68,23 @@ input[name="pdiId"] {
         		<th class="bg-secondary text-white">CPU 종류</th>
         		<td>
         			<select name="pdaCpu" style="width: 70%;">
-        				<option></option>
+        				<option value="">선택</option>
+        				<option value="106">코어i7-10세대</option>
+        				<option value="107">코어i5-10세대</option>
+        				<option value="108">라이젠7-5세대</option>
+        				<option value="109">라이젠5-5세대</option>
+        				<option value="110">기타</option>
         			</select>
         		</td>
         		<th class="bg-secondary text-white">화면크기</th>
         		<td>
         			<select name="pdaSize" style="width: 70%;">
-        				<option></option>
+        				<option value="">선택</option>
+        				<option value="111">17인치대</option>
+        				<option value="112">16인치대</option>
+        				<option value="113">15인치대</option>
+        				<option value="114">14인치대</option>
+        				<option value="115">13인치대</option>
         			</select>
         		</td>
         	</tr>
@@ -77,13 +92,21 @@ input[name="pdiId"] {
         		<th class="bg-secondary text-white">RAM 용량</th>
         		<td>
         			<select name="pdaRam" style="width: 70%;">
-        				<option></option>
+        				<option value="">선택</option>
+        				<option value="116">64GB</option>
+        				<option value="117">32GB</option>
+        				<option value="118">16GB</option>
+        				<option value="119">8GB</option>
+        				<option value="120">4GB</option>
         			</select>
         		</td>
         		<th class="bg-secondary text-white">SSD 용량</th>
         		<td>
         			<select name="pdaSsd" style="width: 70%;">
-        				<option></option>
+        				<option value="">선택</option>
+        				<option value="123">1TB 초과</option>
+        				<option value="122">512GB</option>
+        				<option value="121">256GB</option>
         			</select>
         		</td>
         	</tr>
@@ -91,13 +114,21 @@ input[name="pdiId"] {
         		<th class="bg-secondary text-white">운영체제</th>
         		<td>
         			<select name="pdaOs" style="width: 70%;">
-        				<option></option>
+        				<option value="">선택</option>
+        				<option value="124">Win10</option>
+        				<option value="125">Win10 Pro</option>
+        				<option value="126">미포함</option>
         			</select>
         		</td>
         		<th class="bg-secondary text-white">무게</th>
         		<td>
         			<select name="pdaWeight" style="width: 70%;">
-        				<option></option>
+        				<option value="">선택</option>
+        				<option value="127">1.0kg 이하</option>
+        				<option value="128">1.4kg</option>
+        				<option value="129">1.7kg</option>
+        				<option value="130">2.0kg</option>
+        				<option value="131">2.3kg 이상</option>
         			</select>
         		</td>
         	</tr>
@@ -120,29 +151,3 @@ input[name="pdiId"] {
     </div>
   </div>
 </div>
-<script>
-$('.registerProduct').on('click', function(e){
-	e.preventDefault();
-	
-	getPdiId();
-});
-
-$('.insert').on('click', function(e){
-	e.preventDefault();
-	
-	let data1 = $('#pdRegForm').serializeObject();
-	console.log('data1 => ',data1);
-});
-
-
-const getPdiId = async () => {
-	let res = await axios.get(contextPath+'/product/getPdiId');
-	let data = res.data;
-	if(Object.keys(data).length){
-		if(!CommonUtil.isEmpty(data.pdiId)){
-			console.log('data =>', res.data);
-			$('#pdRegForm input[name=pdiId]').val(data.pdiId);
-		}
-	}
-}
-</script>

@@ -2,6 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.study.demo.mapper.ProductMapper">
+	<!-- 상품ID 자동부여 -->
 	<select id="selectPdId" resultType="java.util.HashMap">
 		SELECT 
       		IF(A.AA<![CDATA[<]]>1, 'A1000001', CONCAT(LEFT(A.PDI_ID,1), CAST(SUBSTR(A.PDI_ID,2) AS UNSIGNED)+1)) pdiId 
@@ -14,4 +15,68 @@
       		  LIMIT 1) A
       	WHERE 1=1
 	</select>
+	
+	<!-- 상품 등록 -->
+	<insert id="regPdInfo">
+		INSERT INTO PD_INFO (
+							PDI_ID
+						   ,PDI_NM
+						   ,PDI_PRC
+						   ,PDI_DV_FEE
+						   ,PDI_REG_DT
+						   ,PDI_AMT
+						   ,REG_USER
+						   ,REG_DT
+						   ,UDT_USER
+						   ,UDT_DT
+						   ,USE_YN	
+							)
+			   VALUES (
+			   		   #{pdiId}
+			   		  ,#{pdiNm}
+			   		  ,#{pdiPrc} 
+			   		  ,#{pdiDvFee}
+			   		  ,NOW()
+			   		  ,#{pdiAmt}
+			   		  ,#{regUser}
+			   		  ,NOW()
+			   		  ,#{regUser}
+			   		  ,NOW()
+			   		  ,#{useYn}
+			   		  )
+	</insert>
+	
+	<!-- 상품 속성 등록 -->
+	<insert id="regPdAttrInfo">
+		INSERT INTO PD_ATTR_INFO (
+							PDI_ID
+						   ,PDA_MANU
+						   ,PDA_CPU
+						   ,PDA_SIZE
+						   ,PDA_RAM
+						   ,PDA_SSD
+						   ,PDA_OS
+						   ,PDA_WEIGHT
+						   ,REG_USER
+						   ,REG_DT
+						   ,UDT_USER
+						   ,UDT_DT
+						   ,USE_YN	
+							)
+			   VALUES (
+			   		   #{pdiId}
+			   		  ,#{pdaManu}
+			   		  ,#{pdaCpu} 
+			   		  ,#{pdaSize}
+			   		  ,#{pdaRam}
+			   		  ,#{pdaSsd}
+			   		  ,#{pdaOs}
+			   		  ,#{pdaWeight}
+			   		  ,#{regUser}
+			   		  ,NOW()
+			   		  ,#{regUser}
+			   		  ,NOW()
+			   		  ,#{useYn}
+			   		  )
+	</insert>
 </mapper>

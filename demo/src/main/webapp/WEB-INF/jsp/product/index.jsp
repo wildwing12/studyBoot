@@ -73,9 +73,9 @@ input[type=checkbox] {
                         		<tr>
                         			<th style="width:10%;">SSD용량</th>
                         			<td colspan="3">
-                        				<input type="checkbox" name="pdaSsd" value="121">&nbsp;1TB 초과&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaSsd" value="123">&nbsp;1TB 초과&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         				<input type="checkbox" name="pdaSsd" value="122">&nbsp;512GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        				<input type="checkbox" name="pdaSsd" value="123">&nbsp;256GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        				<input type="checkbox" name="pdaSsd" value="121">&nbsp;256GB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         			</td>
                         		</tr>
                         		<tr>
@@ -92,7 +92,7 @@ input[type=checkbox] {
                         			<th style="width:10%;">검색어</th>
                         			<td>
                         				<select style="width: 20%;">
-                        					<option>---선택---</option>
+                        					<option value="">선택</option>
                         					<option value="pdiId">상품ID</option>
                         					<option value="pdiNm">상품명</option>
                         				</select>&nbsp;
@@ -162,25 +162,14 @@ input[type=checkbox] {
 		</div>
 	</div>
 <%@ include file="registerProduct.jsp" %>
+
+<script src="/js/productScript.js"></script>
 <script>
 $(document).ready(function(){
 	$('#regDt1').datepicker();
 	$('#regDt2').datepicker();
 	
 	CommonUtil.appearFileName();
-});
-
-$('.search').on('click', function(){
-	let cdNm = CdNm.PD;
-	console.log('코드: ',cdNm);
-	
-	let manuArr = [];
-	$("input[name='pdaManu']:checked").each(function(i){
-		manuArr.push(cdNm+$(this).val());
-	})
-	console.log('manu => ',manuArr);
-	
-	console.log('코드명: ',CdVal(cdNm,'105'));
 });
 </script>
 </body>
