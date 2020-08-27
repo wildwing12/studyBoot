@@ -19,7 +19,7 @@ input[name="pdiId"] {
     <div class="modal-content">
       <div class="modal-header bg-dark text-white">
         <h5 class="modal-title" id="staticBackdropLabel">상품등록</h5>
-        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close" onclick="resetForm()">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -41,10 +41,12 @@ input[name="pdiId"] {
         	</tr>
         	<tr>
         		<th class="bg-secondary text-white">업체ID</th>
-        		<td colspan="3">
-        			<input id="comId" style="width: 80%;">&nbsp;
-        			<button type="button" class="btn btn-secondary searchCompany">업체 조회</button>
+        		<td>
+        			<input id="comId" style="width: 75%;">&nbsp;
+        			<button type="button" class="btn btn-sm btn-secondary searchCompany">조회</button>
         		</td>
+        		<th class="bg-secondary text-white">수량</th>
+        		<td style="width: 30%;"><input type="number" name="pdiAmt" style="width: 90%;"></td>
         	</tr>
         	<tr>
         		<th class="bg-secondary text-white">업체명</th>
@@ -142,10 +144,11 @@ input[name="pdiId"] {
         		</td>
         	</tr>
         </table>
+      	<input type="reset" style="display: none;" id="prodRegReset">
         </form>
       </div>
       <div class="modal-footer" style="margin: 0 auto; border-top: none;">
-        <button type="button" class="btn btn-dark" data-dismiss="modal">초기화</button>
+        <button type="button" class="btn btn-dark" data-dismiss="modal" onclick="resetForm()">초기화</button>
         <button type="button" class="btn btn-dark insert">신규등록</button>
       </div>
     </div>

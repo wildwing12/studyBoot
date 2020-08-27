@@ -41,6 +41,7 @@ public class ProductServiceImpl implements ProductService {
 		} catch (Exception e) {
 			result = new ResponseEntity<Map<String,Object>>(HttpStatus.BAD_REQUEST);
 			log.error("상품ID 조회 실패 => {}", e.getMessage());
+			throw new RuntimeException();
 		}
 		return result;
 	}
@@ -64,7 +65,7 @@ public class ProductServiceImpl implements ProductService {
 					//상품ID가 존재할 경우 상품 등록, 상품 속성 등록 동시 처리
 					pdInfo.setRegUser(regUser);
 					pdInfo.setUdtUser(regUser);
-					pdInfo.setUseYn(useYn);
+					log.info("pdInfo >>>>>> {}",pdInfo);
 					int regPdInfo = productMapper.regPdInfo(pdInfo);
 					String pdaManu = pdInfo.getPdAttrInfo().getPdaManu();
 					String pdaCpu = pdInfo.getPdAttrInfo().getPdaCpu();
@@ -88,6 +89,7 @@ public class ProductServiceImpl implements ProductService {
 		} catch (Exception e) {
 			result = -1;
 			log.error("상품등록 실패! => {}",e.getMessage());
+			throw new RuntimeException();
 		}
 		return result;
 	}

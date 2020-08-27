@@ -25,7 +25,7 @@ $('.insert').on('click', function(e){
 	let pdiNm = CommonUtil.ignoreEmptyValue($('#pdRegForm input[name=pdiNm]').val());
 	let pdiPrc = CommonUtil.ignoreEmptyValue($('#pdRegForm input[name=pdiPrc]').val());
 	let pdiDvFee = CommonUtil.ignoreEmptyValue($('#pdRegForm input[name=pdiDvFee]').val());
-	let pdiAmt = 9999; //임시, 추후 수정 예정
+	let pdiAmt = CommonUtil.ignoreEmptyNumber($('#pdRegForm input[name=pdiAmt]').val()); 
 	let pdaManu = CommonUtil.ignoreEmptyValue($('#pdRegForm select[name=pdaManu]').val());
 	let pdaCpu = CommonUtil.ignoreEmptyValue($('#pdRegForm select[name=pdaCpu]').val());
 	let pdaSize = CommonUtil.ignoreEmptyValue($('#pdRegForm select[name=pdaSize]').val());
@@ -66,11 +66,13 @@ $('.insert').on('click', function(e){
 		success: function(result){
 			console.log('Insert Response => ',result);
 			alert("상품이 등록되었습니다.");
+			location.reload(true);
 		},
 		error: function(xhr, textStatus, e){
 			console.log('error => ',xhr);
 			//console.log(textStatus);
 			alert(xhr.status+": "+xhr.statusText);
+			resetForm();
 		}
 	})
 });
@@ -85,4 +87,9 @@ const getPdiId = async () => {
 			$('#pdRegForm input[name=pdiId]').val(data.pdiId);
 		}
 	}
+}
+
+const resetForm = () => {
+	$('#prodRegReset').trigger('click');
+	getPdiId();
 }
